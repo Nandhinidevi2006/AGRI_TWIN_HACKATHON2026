@@ -45,9 +45,6 @@ The bet we're making is that removing the hardware barrier gets a lot more farms
  
 ---
  
-## PPT / Presentation Link
- 
- https://docs.google.com/presentation/d/1TZP-rXOmaymKfpXnXcIr0lbsIHQQl5Xo/edit?usp=sharing&ouid=117619884539948233526&rtpof=true&sd=true
  
 ## Live Demonstration Link
 
