@@ -47,10 +47,15 @@ The bet we're making is that removing the hardware barrier gets a lot more farms
  
 ## PPT / Presentation Link
  
- 
+ https://docs.google.com/presentation/d/1TZP-rXOmaymKfpXnXcIr0lbsIHQQl5Xo/edit?usp=sharing&ouid=117619884539948233526&rtpof=true&sd=true
  
 ## Live Demonstration Link
+
+ https://agri-twin-hackmatrix2026-1.onrender.com
+
+## Demo video link
  
+  https://drive.google.com/file/d/1khNqP3SkTEtgKa0kmYKcJHRhtTnwM8tR/view?usp=sharing
  
  
 ---
@@ -70,9 +75,7 @@ The bet we're making is that removing the hardware barrier gets a lot more farms
 - Recharts for the dashboard's charts
 - Lucide React for icons
 - Hand-written CSS for the dark, glassmorphic dashboard look (no UI framework)
-### Mobile
-- Capacitor, wrapping the same React app into a native Android build — one codebase for both web and mobile, no separate mobile UI
----
+
  
 ## Team Members
  
