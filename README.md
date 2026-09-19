@@ -74,14 +74,6 @@ The bet we're making is that removing the hardware barrier gets a lot more farms
 - Hand-written CSS for the dark, glassmorphic dashboard look (no UI framework)
 
  
-## Team Members
- 
-| Name | Role |
-|---|---|
-| Nandhini Devi N | Team Lead — Backend, Digital Twin Engine & ML Scheduler |
-| Parimala M | Frontend, Repo & Documentation |
- 
----
  
 ## Setup Instructions
  
