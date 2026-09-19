@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AgriTwin" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- Theme color for browser chrome -->
+    <meta name="theme-color" content="#10b981" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icon-192.png" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- SEO -->
+    <meta name="description" content="AgriTwin AI — Intelligent Digital Twin & ML Smart Irrigation System for sustainable precision agriculture. Real-time monitoring, AI scheduling, renewable energy analytics." />
+    <meta name="keywords" content="agritech, digital twin, smart irrigation, AI, precision farming, renewable energy, IoT" />
+    <meta name="author" content="AgriTwin AI" />
+
+    <!-- Open Graph (for sharing) -->
+    <meta property="og:title" content="AgriTwin AI - Smart Irrigation Digital Twin" />
+    <meta property="og:description" content="Intelligent Digital Twin & ML Smart Irrigation System for sustainable precision agriculture" />
+    <meta property="og:image" content="/icon-512.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AgriTwin AI" />
+    <meta name="twitter:description" content="ML-powered Smart Irrigation & Digital Twin Platform" />
+    <meta name="twitter:image" content="/icon-512.png" />
+
+    <title>AgriTwin AI - Intelligent Digital Twin &amp; ML Smart Irrigation</title>
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Register Service Worker for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('[AgriTwin] Service Worker registered:', reg.scope);
+            })
+            .catch((err) => {
+              console.warn('[AgriTwin] Service Worker registration failed:', err);
+            });
+        });
+      }
+
+      // PWA Install prompt handler
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // Show install button if it exists
+        const installBtn = document.getElementById('pwa-install-btn');
+        if (installBtn) installBtn.style.display = 'flex';
+        window.__agritwinInstallPrompt = e;
+      });
+
+      window.addEventListener('appinstalled', () => {
+        console.log('[AgriTwin] App installed as PWA!');
+        deferredPrompt = null;
+      });
+    </script>
+  </body>
+</html>
